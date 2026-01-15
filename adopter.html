@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA Haute-Loire - Adoption</title>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="adopter.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <nav class="nav-bar">
+            <div class="burger">☰</div>
+            <img src="images/logo_1.png" alt="SPA Logo" class="logo">
+
+            <ul class="nav-links">
+                <li><a href="#">Adopter</a></li>
+                <li><a href="#">Nous aider</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Boutique</a></li>
+            </ul>
+
+            <div class="user-profile"></div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="intro-section">
+            <div class="dashed-box">
+                <h1>Les animaux à l'adoption</h1>
+                <p>En adoptant un animal de compagnie dans un des refuges indépendants de France, vous lui offrez une
+                    nouvelle vie, une chance d'être enfin heureux.</p>
+            </div>
+        </section>
+
+        <section class="timeline-section">
+            <article class="timeline-card">
+                <h2>3 jours</h2>
+                <p>Votre animal arrive à peine au sein de votre foyer...</p>
+                <p class="warning">⚠️ Lors de cette première phase, votre animal peut ne pas manger ni boire.</p>
+            </article>
+
+            <article class="timeline-card">
+                <h2>3 semaines</h2>
+                <p>Les premières semaines de cohabitation vont permettre à votre animal d'apprendre à mieux vous
+                    connaître...</p>
+            </article>
+
+            <article class="timeline-card">
+                <h2>3 mois</h2>
+                <p>Après environ trois mois, votre animal aura pris ses marques et développé une réelle complicité avec
+                    vous...</p>
+            </article>
+        </section>
+
+        <section class="filters-section">
+            <details class="filter-item">
+                <summary>Espèces <span class="arrow">▼</span></summary>
+                <div class="filter-content">
+                    <label><input type="checkbox"> Chats</label>
+                    <label><input type="checkbox"> Chiens</label>
+                </div>
+            </details>
+
+            <details class="filter-item">
+                <summary>Age <span class="arrow">▼</span></summary>
+                <div class="filter-content">
+                    <input type="number" min="0" max="50" placeholder="Entrez un âge">
+                </div>
+            </details>
+
+            <details class="filter-item">
+                <summary>Sexe <span class="arrow">▼</span></summary>
+                <div class="filter-content">
+                    <label><input type="checkbox"> Masculin</label>
+                    <label><input type="checkbox"> Féminin</label>
+                </div>
+            </details>
+        </section>
+
+        <div class="trier-container">
+            <button class="btn-trier">Trier</button>
+        </div>
+
+        <section class="animal-grid">
+            <article class="animal-card">
+                <img src="images/cookie.webp" alt="Gire">
+                <h3>GIRE</h3>
+            </article>
+            <article class="animal-card">
+                <img src="images/dog1.webp" alt="Backshoteur">
+                <h3>BACKSHOTEUR</h3>
+            </article>
+            <article class="animal-card">
+                <img src="images/dog2.webp" alt="Grimberg">
+                <h3>GRIMBERG</h3>
+            </article>
+            <article class="animal-card">
+                <img src="images/felix.webp" alt="Belledent-Peyre">
+                <h3>BELLEDENT-PEYRE</h3>
+            </article>
+            <article class="animal-card">
+                <img src="images/garfield.webp" alt="Mitraillette">
+                <h3>MITRAILLETTE</h3>
+            </article>
+            <article class="animal-card">
+                <img src="images/lynx.webp" alt="Nicolas">
+                <h3>NICOLAS</h3>
+            </article>
+            <article class="animal-card">
+                <img src="images/minou.webp" alt="Anita">
+                <h3>ANITA</h3>
+            </article>
+            <article class="animal-card">
+                <img src="images/roco.webp" alt="Beuf">
+                <h3>BEUF</h3>
+            </article>
+            <article class="animal-card">
+                <img src="images/lion.webp" alt="Garfield">
+                <h3>GARFIELD</h3>
+            </article>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <span class="fb-logo">F</span>
+            <span class="mentions">Mentions légales</span>
+        </div>
+    </footer>
+</body>
+
+</html>
