@@ -222,10 +222,11 @@ footer {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
-    min-height: 50vh;           /* hauteur mobile par défaut */
-    position: relative;          /* pour positionner texte et boutons */
-    color: var(--yellow-light);
+    min-height: 50vh;
+    /* hauteur mobile par défaut */
+    position: relative;
+    /* pour positionner texte et boutons */
+    color: #4F402D;
 }
 
 .banniere-aider__overlay {
@@ -234,11 +235,11 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.25); /* overlay plus blanc / transparent */
+    background: rgba(255, 255, 255, 0.25);
+    /* overlay plus blanc / transparent */
     padding: 20px 5%;
     box-sizing: border-box;
 }
-
 
 /* Contenu texte en haut à gauche */
 .banniere-aider__contenu {
@@ -269,9 +270,16 @@ footer {
     text-decoration: none;
 }
 
-.btn-don, .btn-adhesion {
+.btn-don,
+.btn-adhesion {
     background-color: #AB8A60;
     color: white;
+}
+
+.btn-don:hover,
+.btn-adhesion:hover {
+    background-color: white;
+    color: #AB8A60;
 }
 
 /* =========================
@@ -280,6 +288,7 @@ footer {
 @media screen and (min-width: 768px) {
     .banniere-aider {
         min-height: 60vh;
+        position: relative;
     }
 
     .banniere-aider__overlay {
@@ -288,6 +297,14 @@ footer {
 
     .banniere-aider__contenu h1 {
         font-size: 2.4rem;
+    }
+
+    .banniere-aider__actions {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+
+        flex-direction: row;
     }
 }
 
@@ -309,5 +326,161 @@ footer {
 
     .banniere-aider__contenu h1 {
         font-size: 3rem;
+    }
+}
+
+/* --- SECTION BENEVOLAT ET MECENAT --- */
+.section-benevolat {
+    background-color: #496537;
+    padding: 40px 5%;
+    /* mobile-first padding */
+    color: #4F402D;
+    text-align: center;
+    /* centrer sur mobile */
+}
+
+.section-benevolat__cards {
+    display: flex;
+    flex-direction: column;
+    /* mobile : boxes empilées */
+    gap: 20px;
+    /* espace entre les boxes */
+    margin-bottom: 30px;
+    /* espace avant le bouton */
+}
+
+.section-benevolat__card {
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    background-color: #E3DBCC;
+}
+
+.section-benevolat__card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+
+.section-benevolat__card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Bouton centré en dessous */
+.section-benevolat__cta {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+.section-benevolat__cta:hover {
+    background-color: #ffffff;
+    color: #496537;
+}
+
+/* =========================
+   TABLETTE ≥ 768px
+========================= */
+@media screen and (min-width: 768px) {
+    .section-benevolat__cards {
+        flex-direction: row;
+        /* deux boxes côte à côte */
+        gap: 30px;
+        text-align: left;
+        /* texte aligné à gauche */
+    }
+}
+
+/* --- SECTION PARTENAIRES */
+
+.section-partenaires {
+    background-color: #E3DBCC;
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.section-partenaires__title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #4F402D;
+    /* texte vert foncé pour contraste */
+}
+
+/* Carrousel horizontal scrollable */
+.section-partenaires__carousel {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    /* scroll horizontal sur mobile */
+    padding-bottom: 10px;
+    /* espace sous les cartes */
+    scroll-behavior: smooth;
+    /* scroll fluide quand JS sera ajouté */
+}
+
+/* Cacher la scrollbar sur mobile si besoin */
+.section-partenaires__carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.section-partenaires__carousel {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Carte partenaire */
+.partenaire-card {
+    min-width: 150px;
+    /* largeur mobile */
+    flex: 0 0 auto;
+    /* empêcher de rétrécir */
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.partenaire-card img {
+    max-width: 100%;
+    max-height: 50px;
+    object-fit: contain;
+}
+
+/* =========================
+   TABLETTE ≥ 768px
+========================= */
+@media screen and (min-width: 768px) {
+    .partenaire-card {
+        min-width: 200px;
+        /* plus grande carte sur tablette */
+        padding: 20px;
+    }
+
+    .section-partenaires__title {
+        font-size: 2rem;
+    }
+}
+
+/* =========================
+   DESKTOP ≥ 1024px
+========================= */
+@media screen and (min-width: 1024px) {
+    .partenaire-card {
+        min-width: 220px;
+        padding: 25px;
+    }
+
+    .section-partenaires__title {
+        font-size: 2.4rem;
     }
 }
